@@ -1,0 +1,61 @@
+---
+title: "Retriew_answer"
+author: "Harold Romero"
+date: "2023-08-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(nycflights13)
+library(tidyverse)
+```
+El presente documento desea demostrar el uso de la herramienta R Markdown, donde se realizaran los ejercicios, para este reporte se toman algunos de los ejercicios resueltos
+
+Ejercicio 5.2.4 Item 1 
+
+1. Filtramos los vuelos que tienen una duración superior a 2 horas con el comando `filter`, la horas en minutos se calculan con `60*2` 
+
+```{r}
+flights_x <- flights
+
+Arrival_delay <- filter(flights_x, arr_delay >= (60*2))
+```
+
+2. Organizamos los vuelos de manera desendente, dejando en la parte superior los que tuvieron un mayor tiempo
+
+```{r}
+Arrival_delay <- arrange(Arrival_delay, desc(arr_delay))
+```
+
+Ejercicio 5.2.4 Item 2
+
+Filtramos todos los vuelos que arribaron en IAH o HOU, a traves del codigo, esto se hizo con el comando `filter` 
+
+```{r}
+IAH_HOU <- filter(Arrival_delay, dest == "HOU" | dest == "IAH")
+IAH_HOU <- arrange(IAH_HOU, desc(dest), arr_delay)
+```
+
+Ejercicio 5.3.1
+
+Utilizamos `arrange()` y `is.na`para ordenar todos los valores que faltan al principio
+
+```{r}
+# 
+Arrange1 <- flights_x %>% arrange(is.na(dep_delay))
+```
+
+Ejercicio 5.3.2
+Ordenamos los vuelos mas retrasados con `arrange`
+
+```{r}
+Arrange2 <- flights_x %>% arrange(desc(dep_delay))
+
+```
+
+Ordenamos los vuelos para encontrar los vuelos que salieron antes con `arrange``
+
+```{r}
+Arrange3 <- flights_x %>% arrange(dep_time)
+```
