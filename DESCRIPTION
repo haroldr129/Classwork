@@ -1,11 +1,19 @@
 Package: Classwork
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Paquete para resolver el Classwork 2
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: person ("Harold", "Romero", email= "haroldr129@gmail.com", role=c("aut","cre"))
+Maintainer: <haroldr129@gmail.com>
+Description: En el presente proyecto se pretende resolver el Classwork 2
+    Donde el usuario podra ingresar un numero de 1 a 6 y como resultado
+    Retornara uno de los ejercición que realizaron en el Classwork 1 con las 
+    Libreria nycflights13 y tidyverse
+License: use_mit_license()
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    dplyr
+    tidyr
+    nycflights13
+    tidyverse
+RoxygenNote: 7.2.3
