@@ -19,3 +19,4 @@ tailnum_retraso <- flights_x %>%
 # Imprimir el avión con el peor historial de puntualidad
 cat("El avión con el peor historial de puntualidad es:", tailnum_retraso$tailnum, "\n")
 cat("Proporción de vuelos con retraso:", tailnum_retraso$on_time_record, "\n")
+

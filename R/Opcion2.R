@@ -15,10 +15,6 @@ Arrange2 <- flights_x %>%
 Arrange3 <- flights_x %>%
   arrange(dep_time) #Ordenamos los vuelos que salieron antes
 
-#Ejercicio 5.3.3 Ordenar flights para encontrar los vuelos más rápidos (velocidad más alta).
-
-Arrange4 <- flights_x %>%
-  arrange(desc(speed)) #Ordenamos por velocidad
 
 #Ejercicio 5.3.4 ¿Qué vuelos viajaron más lejos? ¿Cuál viajó menos?
 
@@ -27,3 +23,13 @@ Arrange5 <- flights_x %>%
 
 Arrange6 <- flights_x %>%
   arrange(distance) #Ordenamos los vuelos que viajaron menos
+
+cat("Ejercicio 5.3.1", "\n")
+print(Arrange1)
+cat("Ejercicio 5.3.2", "\n")
+print(Arrange2)
+print(Arrange3)
+cat("Ejercicio 5.3.4", "\n")
+print(Arrange5)
+print(Arrange6)
+

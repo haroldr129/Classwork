@@ -12,6 +12,7 @@ mutate1 <- flights_x %>%
     dep_time = minutos_medianoche(dep_time %/% 100, dep_time %% 100),
     sched_dep_time = minutos_medianoche (sched_dep_time %/% 100, sched_dep_time %% 100)
   )
+print(mutate1)
 
 #Ejercicio 5.5.2 Item 2 Comparar air_timecon arr_time - dep_time. Que esperas ver? ¿Que ves? ¿Qué necesitas hacer para solucionarlo?
 
@@ -19,9 +20,13 @@ mutate1 <- flights_x %>%
 mutate2 <- flights_x %>%
   mutate(dur_vuelo= arr_time - dep_time)
 
+print(mutate2)
+
 # Comparar air_time con flight_duration
 Comparar <- mutate2 %>%
   select(air_time,dur_vuelo)
 
 # Imprimir las primeras filas de la comparación
 head(Comparar)
+
+

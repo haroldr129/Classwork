@@ -10,9 +10,13 @@ Arrival_delay <-
 Arrival_delay <-
   arrange(Arrival_delay,
           desc(arr_delay)) # Ordenamos los datos de manera descendente por la columna arrival delay
-
 #Ejercicio 5.2.4 Item 2
 IAH_HOU <- filter(Arrival_delay,
                   dest=="HOU"|dest=="IAH")
 IAH_HOU <- arrange(IAH_HOU,
                    desc(dest),arr_delay) # Ordenamos los datos de manera descendente por la columna destino y arrival delay
+cat("Vuelos con Duración superior a 2 horas", "\n")
+print(Arrival_delay)
+cat("Vuelos con destino HOU o IAH", "\n")
+print(IAH_HOU)
+
